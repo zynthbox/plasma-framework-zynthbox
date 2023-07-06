@@ -72,28 +72,34 @@ Kirigami.BasicThemeDefinition {
     onSync: {
         object.PlasmaCore.ColorScope.inherit = false
 
-        switch (object.Kirigami.PlasmaCore.Theme.colorSet) {
-        case Kirigami.PlasmaCore.Theme.Window:
-            object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.NormalColorGroup;
-            break;
-        case Kirigami.PlasmaCore.Theme.Button:
-            object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.ButtonColorGroup;
-            break;
-        case Kirigami.PlasmaCore.Theme.View:
-            object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.ViewColorGroup;
-            break;
-        case Kirigami.PlasmaCore.Theme.Selection:
-            object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.NormalColorGroup;
-            break;
-        case Kirigami.PlasmaCore.Theme.Tooltip:
-            object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.ComplementaryColorGroup;
-            break;
-        case Kirigami.PlasmaCore.Theme.Complementary:
-            object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.ComplementaryColorGroup;
-            break;
-        case Kirigami.PlasmaCore.Theme.Header:
-            object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.HeaderColorGroup;
-            break;
+        if (object != null
+                && object.Kirigami != null
+                && object.Kirigami.PlasmaCore != null
+                && object.Kirigami.PlasmaCore.Theme != null
+                && object.Kirigami.PlasmaCore.Theme.colorSet != null) {
+            switch (object.Kirigami.PlasmaCore.Theme.colorSet) {
+            case Kirigami.PlasmaCore.Theme.Window:
+                object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.NormalColorGroup;
+                break;
+            case Kirigami.PlasmaCore.Theme.Button:
+                object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.ButtonColorGroup;
+                break;
+            case Kirigami.PlasmaCore.Theme.View:
+                object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.ViewColorGroup;
+                break;
+            case Kirigami.PlasmaCore.Theme.Selection:
+                object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.NormalColorGroup;
+                break;
+            case Kirigami.PlasmaCore.Theme.Tooltip:
+                object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.ComplementaryColorGroup;
+                break;
+            case Kirigami.PlasmaCore.Theme.Complementary:
+                object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.ComplementaryColorGroup;
+                break;
+            case Kirigami.PlasmaCore.Theme.Header:
+                object.PlasmaCore.ColorScope.colorGroup = PlasmaCore.PlasmaCore.Theme.HeaderColorGroup;
+                break;
+            }
         }
     }
 }
