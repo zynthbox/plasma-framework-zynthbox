@@ -1,3 +1,5 @@
+##  A Fork of Plasma Framework QQC2 style curated for Zynthbox
+
 # Plasma Framework
 
 Foundational libraries, components, and tools of the Plasma workspaces
