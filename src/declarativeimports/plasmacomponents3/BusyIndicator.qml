@@ -28,9 +28,10 @@ T.BusyIndicator {
     contentItem: Item {
         /* Binding on `visible` implicitly takes care of `control.visible`,
          * `control.running` and `opacity > 0` at once.
-         * Also, don't animate at all if the user has disabled animations.
+         * Also, always animate it even if the user has disabled animations. Otherwise
+         * the indicator sits idle and does not look good
          */
-        property bool animationRunning: visible && PlasmaCore.Units.longDuration > 1
+        property bool animationRunning: visible //&& PlasmaCore.Units.longDuration > 1
 
         /* implicitWidth and implicitHeight won't work unless they come
          * from a child of the contentItem. No idea why.
